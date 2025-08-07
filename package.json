@@ -1,0 +1,42 @@
+{
+  "name": "smapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "keywords": ["nestjs", "mapper", "mapping", "decorators", "nestjs-library"],
+  "author": "Agustin Oviedo",
+  "license": "MIT",
+  "description": "A lightweight, profile-based mapping library for NestJS.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/smapper.git"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@nestjs/common": "^11.1.6",
+    "fast-glob": "^3.3.3",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.1.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.2.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
