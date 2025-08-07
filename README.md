@@ -1,4 +1,4 @@
-#  SMapper
+#  Smappy
 
 A lightweight, profile-based mapping library for NestJS that provides a simple way to transform objects between different types with support for context-aware mapping.
 
@@ -14,7 +14,7 @@ A lightweight, profile-based mapping library for NestJS that provides a simple w
 ## Installation
 
 ```bash
-npm install smapper
+npm install smappy
 ```
 
 ## Quick Start
@@ -22,8 +22,8 @@ npm install smapper
 ### 1. Create a Mapper
 
 ```typescript
-import { Mapper } from 'smapper';
-import { IMapper } from 'smapper';
+import { Mapper } from 'smappy';
+import { IMapper } from 'smappy';
 
 interface User {
   firstName: string;
@@ -58,7 +58,7 @@ export class UserMapper implements IMapper<User, UserDto, UserMapperContext> {
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { MapperModule } from 'smapper';
+import { MapperModule } from 'smappy';
 import { UserMapper } from './mappers/user.mapper';
 
 @Module({
